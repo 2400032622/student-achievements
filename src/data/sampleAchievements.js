@@ -1,19 +1,18 @@
+// src/data/sampleAchievements.js
+
 const sampleAchievements = [
   {
-    id: 1,
-    title: "Science Fair Winner",
-    description: "Won first place at the annual science fair.",
+    title: "Hackathon Winner",
+    description: "Won 1st place in the college coding hackathon."
   },
   {
-    id: 2,
-    title: "Soccer Team Captain",
-    description: "Led the school soccer team as captain for the 2024 season.",
+    title: "Sports Champion",
+    description: "Won gold medal in inter-college football competition."
   },
   {
-    id: 3,
-    title: "Volunteer Service",
-    description: "Completed 50 hours of community service.",
-  },
+    title: "Paper Presentation",
+    description: "Presented paper at National Student Tech Conference."
+  }
 ];
 
 export default sampleAchievements;

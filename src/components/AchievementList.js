@@ -1,19 +1,20 @@
-import React from 'react';
+import React from "react";
 
-const AchievementList = ({ achievements }) => {
-  if (!achievements || achievements.length === 0) {
-    return <p>No achievements to display.</p>;
-  }
-
+export default function AchievementList({ achievements }) {
   return (
-    <ul>
-      {achievements.map((ach) => (
-        <li key={ach.id} style={{ marginBottom: '15px' }}>
-          <strong>{ach.title}</strong>: {ach.description}
-        </li>
-      ))}
-    </ul>
+    <div>
+      <h3>All Achievements</h3>
+      {achievements.length === 0 ? (
+        <p>No achievements to display.</p>
+      ) : (
+        <ul>
+          {achievements.map((a, i) => (
+            <li key={i}>
+              <strong>{a.title}</strong> - {a.description}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   );
-};
-
-export default AchievementList;
+}

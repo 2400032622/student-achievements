@@ -6,29 +6,35 @@ body {
   padding: 0;
 }
 
-/* Login box center & style */
+/* Login box */
 .login-container {
   width: 350px;
-  margin: 100px auto;
+  margin: 120px auto;
   background: white;
   padding: 25px;
   border-radius: 8px;
-  box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-/* Form vertical alignment */
+/* Title */
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form vertical */
 .login-form {
   display: flex;
   flex-direction: column;
 }
 
-/* Labels spacing */
+/* Label */
 .login-form label {
   margin-bottom: 6px;
   font-weight: bold;
 }
 
-/* Input & dropdown styling */
+/* Inputs & dropdown */
 .login-form input,
 .login-form select {
   padding: 10px;
@@ -37,7 +43,7 @@ body {
   border-radius: 5px;
 }
 
-/* Button */
+/* Login button */
 .login-form button {
   padding: 10px;
   background: #007bff;
