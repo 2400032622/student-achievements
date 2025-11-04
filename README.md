@@ -1,70 +1,121 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🎓 Student Achievements Portal
 
-## Available Scripts
+A simple Student Achievement Management Portal built using **React**.  
+This application allows **students** to view their achievements and **admin** to add/manage achievements.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Features
 
-Runs the app in the development mode.  
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 👨‍🎓 Student Portal
+- Login as student
+- View list of achievements
 
-The page will reload when you make changes.  
-You may also see any lint errors in the console.
+### 👨‍💼 Admin Portal
+- Login as admin
+- Add achievements (Title & Description)
+- View all achievements
+- Logout functionality
 
-### `npm test`
+### 🔐 Authentication
+Role-based login:
 
-Launches the test runner in the interactive watch mode.  
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Role | Username | Password |
+|------|---------|---------|
+| Student | student | student |
+| Admin | admin | Admin@123 |
 
-### `npm run build`
+> Password change popup appears for admin on first login (security message simulation).
 
-Builds the app for production to the `build` folder.  
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.  
-Your app is ready to be deployed!
+## 📸 Screenshots
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🔑 Login Page
+![Login](./screenshots/login.png)
 
-### `npm run eject`
+### 🧑‍🎓 Student Dashboard
+![Student Page](./screenshots/student.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🛠️ Admin Dashboard
+![Admin Page](./screenshots/admin.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> Create a `screenshots` folder and add your images as:
+```
+screenshots/login.png  
+screenshots/student.png  
+screenshots/admin.png
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🛠️ Tech Stack
 
-## Learn More
+- React.js (Frontend)
+- Local Storage based auth & data handling
+- CSS / Basic UI components
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📂 Folder Structure
+```
+student-achievements/
+ └── src/
+      ├── components/
+      ├── pages/
+      ├── data/
+      └── App.js
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## ▶️ How to Run Locally
 
-### Analyzing the Bundle Size
+```bash
+npm install
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Application runs on  
+```
+http://localhost:3000
+```
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🌐 Deployment
 
-### Advanced Configuration
+You can deploy this project using:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Netlify**
+- **Vercel**
+- **GitHub Pages**
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🧑‍🎓 Project Details
 
-### `npm run build` fails to minify
+This project is developed as part of academic learning (2nd Year Engineering) to demonstrate:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React components
+- State & props handling
+- Role-based routing
+- Local storage data management
+
+---
+
+## 🤝 Contributing
+Feel free to fork and enhance the project!
+
+---
+
+## ⭐ Show Support
+If you liked this project, please ⭐ the repository on GitHub!
+
+---
+
+## 👤 Author
+**Bhadri** — 2nd year Engineering Student  
+Learning React & Web Development 🙂
+
