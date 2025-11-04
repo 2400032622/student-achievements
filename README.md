@@ -1,4 +1,3 @@
-
 # 🎓 Student Achievements Portal
 
 A simple Student Achievement Management Portal built using **React**.  
@@ -9,14 +8,14 @@ This application allows **students** to view their achievements and **admin** to
 ## 🚀 Features
 
 ### 👨‍🎓 Student Portal
-- Login as student
+- Login as student  
 - View list of achievements
 
 ### 👨‍💼 Admin Portal
-- Login as admin
-- Add achievements (Title & Description)
-- View all achievements
-- Logout functionality
+- Login as admin  
+- Add achievements (Title & Description)  
+- View all achievements  
+- Logout functionality  
 
 ### 🔐 Authentication
 Role-based login:
@@ -26,96 +25,88 @@ Role-based login:
 | Student | student | student |
 | Admin | admin | Admin@123 |
 
-> Password change popup appears for admin on first login (security message simulation).
+> Password change popup appears for admin on first login (simulated security message).
 
 ---
 
 ## 📸 Screenshots
 
-### 🔑 Login Page
-![Login](./screenshots/login.png)
+### 🔑 Login Page  
+![Login](./screenshots/login.png.png)
 
-### 🧑‍🎓 Student Dashboard
-![Student Page](./screenshots/student.png)
+### 🧑‍🎓 Student Dashboard  
+![Student Page](./screenshots/student-dashboard.png.png)
 
-### 🛠️ Admin Dashboard
-![Admin Page](./screenshots/admin.png)
+### 🛠️ Admin Dashboard  
+![Admin Page](./screenshots/admin-dashboard.png.png)
 
-> Create a `screenshots` folder and add your images as:
-```
-screenshots/login.png  
-screenshots/student.png  
-screenshots/admin.png
-```
+> Ensure screenshots are stored as:
+screenshots/login.png.png
+screenshots/student-dashboard.png.png
+screenshots/admin-dashboard.png.png
+
+yaml
+Copy code
 
 ---
 
 ## 🛠️ Tech Stack
 
-- React.js (Frontend)
-- Local Storage based auth & data handling
-- CSS / Basic UI components
+- **React.js** (Frontend)
+- Local Storage for authentication & data
+- CSS-based UI styling
 
 ---
 
 ## 📂 Folder Structure
-```
 student-achievements/
- └── src/
-      ├── components/
-      ├── pages/
-      ├── data/
-      └── App.js
-```
+└── src/
+├── components/
+├── data/
+├── App.js
+└── Login.js
+
+yaml
+Copy code
 
 ---
 
-## ▶️ How to Run Locally
+## ▶️ Run Locally
 
 ```bash
 npm install
 npm start
-```
+Runs at:
 
-Application runs on  
-```
-http://localhost:3000
-```
-
----
-
-## 🌐 Deployment
-
+arduino
+Copy code
+http://localhost:5030
+🌐 Deployment
 You can deploy this project using:
 
-- **Netlify**
-- **Vercel**
-- **GitHub Pages**
+✅ Netlify
 
----
+✅ Vercel
 
-## 🧑‍🎓 Project Details
+✅ GitHub Pages
 
-This project is developed as part of academic learning (2nd Year Engineering) to demonstrate:
+🎯 Project Purpose
+Developed as part of 2nd year Engineering learning project to practice:
 
-- React components
-- State & props handling
-- Role-based routing
-- Local storage data management
+React components
 
----
+State & props
 
-## 🤝 Contributing
-Feel free to fork and enhance the project!
+Role-based auth
 
----
+LocalStorage usage
 
-## ⭐ Show Support
-If you liked this project, please ⭐ the repository on GitHub!
+🤝 Contributing
+Feel free to fork & improve! 🚀
 
----
+⭐ Support
+If this helped you, please ⭐ the repo on GitHub!
 
-## 👤 Author
-**Bhadri** — 2nd year Engineering Student  
+👤 Author
+Bhadri — 2nd Year Engineering Student
 Learning React & Web Development 🙂
-
