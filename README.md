@@ -1,5 +1,8 @@
 # 🎓 Student Achievements Portal
 
+## 🌐 Live Demo
+https://student-achievements-portal.netlify.app/
+
 A simple Student Achievement Management Portal built using **React**.  
 This application allows **students** to view their achievements and **admin** to add/manage achievements.
 
