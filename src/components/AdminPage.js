@@ -1,36 +1,59 @@
 import React, { useState } from "react";
+import AchievementList from "./AchievementList";
+import { Container, Form, Button } from "react-bootstrap";
+import getGreeting from "../utils/getGreeting";
+import "./PageFade.css";
 
-function AdminPage({ achievements, setAchievements }) {
+export default function AdminPage({ achievements, setAchievements }) {
   const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
+  const [desc, setDesc] = useState("");
+  const [category, setCategory] = useState("Academic");
+  const greeting = getGreeting();
 
   const addAchievement = () => {
-    if (title && description) {
-      setAchievements([...achievements, { title, description }]);
-      setTitle("");
-      setDescription("");
-    }
+    if (!title || !desc) return alert("Please fill all fields");
+    setAchievements([...achievements, { title, description: desc, category }]);
+    setTitle("");
+    setDesc("");
+    setCategory("Academic");
   };
 
   return (
-    <div className="dashboard">
-      <h2>Admin Dashboard</h2>
+    <Container className="page-fade" style={{ marginTop: "30px" }}>
+      <h2 className="text-center mb-3">
+        👋 {greeting}, Admin!
+      </h2>
+      <p className="text-center text-muted mb-4">
+        Manage and record all student achievements here 🏆
+      </p>
 
-      <input placeholder="Achievement Title" value={title} onChange={(e) => setTitle(e.target.value)} />
-      <input placeholder="Description" value={description} onChange={(e) => setDescription(e.target.value)} />
+      <div className="d-flex justify-content-center mb-3 flex-wrap gap-2">
+        <Form.Control
+          placeholder="Achievement Title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          style={{ width: "200px" }}
+        />
+        <Form.Control
+          placeholder="Description"
+          value={desc}
+          onChange={(e) => setDesc(e.target.value)}
+          style={{ width: "250px" }}
+        />
+        <Form.Select
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          style={{ width: "160px" }}
+        >
+          <option>Academic</option>
+          <option>Sports</option>
+          <option>Cultural</option>
+          <option>Technical</option>
+        </Form.Select>
+        <Button onClick={addAchievement}>Add Achievement</Button>
+      </div>
 
-      <button onClick={addAchievement}>Add Achievement</button>
-
-      <h3>Achievements</h3>
-
-      {achievements.map((a, i) => (
-        <div className="achievement-card" key={i}>
-          <div className="achievement-title">{a.title}</div>
-          <div>{a.description}</div>
-        </div>
-      ))}
-    </div>
+      <AchievementList achievements={achievements} />
+    </Container>
   );
 }
-
-export default AdminPage;

@@ -50,3 +50,33 @@ body {
 .login-form button:hover {
   background: #0056b3;
 }
+/* 🌞 Light Theme */
+.light-mode {
+  background-color: #f8f9fa;
+  color: #212529;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* 🌙 Dark Theme */
+.dark-mode {
+  background-color: #121212;
+  color: #f8f9fa;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark-mode .card {
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+}
+
+.dark-mode .navbar {
+  background-color: #212529 !important;
+}
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode textarea {
+  background-color: #2b2b2b;
+  color: #fff;
+  border: 1px solid #444;
+}
