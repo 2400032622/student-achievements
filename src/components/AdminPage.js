@@ -11,7 +11,7 @@ export default function AdminPage() {
   const [selectedUser, setSelectedUser] = useState("");
   const [newStudent, setNewStudent] = useState("");
   const [students, setStudents] = useState([]);
-  const [achievements, setAchievements] = useState([]);
+  const [achievements] = useState([]); // ✅ removed unused setAchievements
   const greeting = getGreeting();
 
   // 🧩 Load existing student list from localStorage
@@ -29,8 +29,8 @@ export default function AdminPage() {
     const updatedStudents = [...students, newStudent];
     setStudents(updatedStudents);
     localStorage.setItem("students", JSON.stringify(updatedStudents));
-    setNewStudent("");
     alert(`New student '${newStudent}' added ✅`);
+    setNewStudent("");
   };
 
   // 🏅 Add achievement for selected student
@@ -43,14 +43,12 @@ export default function AdminPage() {
     const newAchievement = { title, description: desc, category };
     const storedData = JSON.parse(localStorage.getItem(selectedUser)) || [];
     storedData.push(newAchievement);
-
     localStorage.setItem(selectedUser, JSON.stringify(storedData));
 
+    alert(`Achievement added for ${selectedUser}! 🎉`);
     setTitle("");
     setDesc("");
     setCategory("Academic");
-
-    alert(`Achievement added for ${selectedUser}! 🎉`);
   };
 
   return (
