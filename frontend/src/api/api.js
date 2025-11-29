@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://student-achievements-final-backend.onrender.com",
+ baseURL: "https://student-achievements-final-backend.onrender.com",
 });
 
 
