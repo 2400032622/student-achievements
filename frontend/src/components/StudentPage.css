@@ -1,0 +1,62 @@
+.student-container {
+  padding: 40px;
+  text-align: center;
+}
+
+.student-title {
+  font-size: 34px;
+  font-weight: bold;
+  color: #0066ff;
+  margin-bottom: 5px;
+}
+
+.student-subtitle {
+  color: #444;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* 3 cards in a row */
+.achievements-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.achievement-card {
+  width: 280px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+}
+
+.achievement-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0a4cff;
+  margin-bottom: 8px;
+}
+
+.achievement-category {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.achievement-desc {
+  font-size: 15px;
+  color: #333;
+}
+
+.no-data {
+  font-size: 18px;
+  color: #888;
+}
