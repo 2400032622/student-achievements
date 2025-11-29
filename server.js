@@ -36,17 +36,21 @@ app.post("/login", async (req, res) => {
     if (username === "admin" && password === "admin123") {
       return res.json({ success: true, role: "Admin", username });
     } else {
-      return res.status(401).json({ success: false, message: "Invalid admin credentials" });
+      return res
+        .status(401)
+        .json({ success: false, message: "Invalid admin credentials" });
     }
   }
 
   // Student Login
   if (role === "Student") {
     if (password !== "student") {
-      return res.status(401).json({ success: false, message: "Student password incorrect" });
+      return res
+        .status(401)
+        .json({ success: false, message: "Student password incorrect" });
     }
 
-    // Create student if not exists
+    // Create if not exists
     let student = await Student.findOne({ username });
     if (!student) {
       student = new Student({ username, achievements: [] });

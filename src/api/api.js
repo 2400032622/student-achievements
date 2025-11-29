@@ -1,19 +1,18 @@
 import axios from "axios";
 
+// 💥 IMPORTANT: Use your deployed backend URL
 const API = axios.create({
-  baseURL: "http://localhost:5000", // your backend URL
+  baseURL: "https://student-achievements-final-backend.onrender.com",
 });
 
-// Add student achievement
+// ---------- LOGIN ----------
+export const loginAPI = (data) => API.post("/login", data);
+
+// ---------- ADD ACHIEVEMENT ----------
 export const addAchievementAPI = (data) => API.post("/achievements", data);
 
-// Get all achievements
-export const getAchievementsAPI = () => API.get("/achievements");
-
-// Student login
-export const studentLoginAPI = (data) => API.post("/login/student", data);
-
-// Admin login
-export const adminLoginAPI = (data) => API.post("/login/admin", data);
+// ---------- GET ACHIEVEMENTS OF ONE STUDENT ----------
+export const getStudentAchievementsAPI = (username) =>
+  API.get(`/achievements/${username}`);
 
 export default API;
