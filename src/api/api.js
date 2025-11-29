@@ -4,6 +4,7 @@ const API = axios.create({
   baseURL: "https://student-achievements-final-backend.onrender.com",
 });
 
+
 // Add student achievement
 export const addAchievementAPI = (data) => API.post("/achievements", data);
 
