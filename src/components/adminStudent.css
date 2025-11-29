@@ -1,0 +1,111 @@
+/* Background same as login */
+.page-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a7bff, #29b6f6);
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+/* Center Card */
+.dashboard-card {
+  width: 550px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Headings */
+.page-title {
+  text-align: center;
+  color: #0a4cff;
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.welcome-text {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* Form styling */
+.form-section {
+  margin-bottom: 25px;
+}
+
+.form-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+/* Button — same as login */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #0066ff, #0044dd);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-btn:hover {
+  opacity: 0.9;
+}
+
+/* Table */
+.table-title {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #0a4cff;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table thead {
+  background: #0066ff;
+  color: white;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.styled-table tr:hover {
+  background: #eef3ff;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}

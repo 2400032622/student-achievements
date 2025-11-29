@@ -1,52 +1,58 @@
-import "./Login.css";
 import React, { useState } from "react";
+import "./Login.css";
 
 export default function Login({ onLogin }) {
-  const [role, setRole] = useState("student");
+  const [role, setRole] = useState("Student");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (role === "admin" && username === "admin" && password === "Admin@123") {
-      onLogin("admin", username);
-    } else if (role === "student" && password === "student") {
-      onLogin("student", username);
+    if (role === "Admin" && password === "admin123") {
+      onLogin("Admin", username);
+    } else if (role === "Student" && password === "student") {
+      onLogin("Student", username);
     } else {
       alert("Invalid credentials");
     }
   };
 
   return (
-    <div className="login-container">
-      <h2>Login</h2>
+    <div className="login-bg">
+      <div className="login-card">
+        <h2 className="login-title">Welcome Back 👋</h2>
 
-      <form onSubmit={handleSubmit} className="login-form">
+        <form onSubmit={handleSubmit}>
+          <label>Select Role</label>
+          <select value={role} onChange={(e) => setRole(e.target.value)}>
+            <option>Student</option>
+            <option>Admin</option>
+          </select>
 
-        <label>Role</label>
-        <select value={role} onChange={(e) => setRole(e.target.value)}>
-          <option value="student">Student</option>
-          <option value="admin">Admin</option>
-        </select>
+          <label>Username</label>
+          <input
+            type="text"
+            placeholder="Enter username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
 
-        <label>Username</label>
-        <input
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          placeholder="Enter username"
-        />
+          <label>Password</label>
+          <input
+            type="password"
+            placeholder="Enter password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
 
-        <label>Password</label>
-        <input
-          value={password}
-          type="password"
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Enter password"
-        />
-
-        <button type="submit">Login</button>
-      </form>
+          <button className="btn-login" type="submit">
+            Login
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

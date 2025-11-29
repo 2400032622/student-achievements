@@ -1,37 +1,35 @@
-import React, { useEffect, useState } from "react";
-import AchievementList from "./AchievementList";
-import { Container } from "react-bootstrap";
-import getGreeting from "../utils/getGreeting";
-import "./PageFade.css";
+import React from "react";
+import "./StudentPage.css";
 
-export default function StudentPage({ username }) {
-  const greeting = getGreeting();
-  const [achievements, setAchievements] = useState([]);
+export default function StudentPage({ username, achievements }) {
 
-  // Load only this student's achievements
-  useEffect(() => {
-    if (username) {
-      const stored = JSON.parse(localStorage.getItem(username)) || [];
-      setAchievements(stored);
-    }
-  }, [username]);
+  // Filter only the logged-in student’s achievements
+  const userAchievements = achievements.filter(
+    (a) => a.student.toLowerCase() === username.toLowerCase()
+  );
 
   return (
-    <Container className="page-fade" style={{ marginTop: "30px" }}>
-      <h2 className="text-center mb-3">
-        👋 {greeting}, {username || "Student"}!
-      </h2>
-      <p className="text-center text-muted">
-        Here are your latest extracurricular achievements 🎯
-      </p>
+    <div className="student-container">
 
-      {achievements.length > 0 ? (
-        <AchievementList achievements={achievements} />
-      ) : (
-        <p className="text-center text-secondary">
-          No achievements found for <strong>{username}</strong>. 🎓
-        </p>
-      )}
-    </Container>
+      <h2 className="student-title">
+        Welcome, {username} 🎓
+      </h2>
+      <p className="student-subtitle">Your Achievements</p>
+
+      <div className="achievements-grid">
+        {userAchievements.length > 0 ? (
+          userAchievements.map((a, i) => (
+            <div key={i} className="achievement-card">
+              <h3 className="achievement-title">{a.title}</h3>
+              <p className="achievement-category">{a.category}</p>
+              <p className="achievement-desc">{a.description}</p>
+            </div>
+          ))
+        ) : (
+          <p className="no-data">No achievements found 😢</p>
+        )}
+      </div>
+
+    </div>
   );
 }

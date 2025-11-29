@@ -4,12 +4,13 @@ import "./HomePage.css";
 
 export default function HomePage() {
   return (
-    <div className="home-container">
-      <h1>🎓 Student Achievements Portal</h1>
-      <p>Track and manage all student achievements in one place.</p>
-      <div className="home-buttons">
-        <Link to="/login" className="btn">Login</Link>
-        <Link to="/about" className="btn">About</Link>
+    <div className="home-page">
+      <div className="home-card">
+        <h1 className="home-title">🎓 Student Achievements Portal</h1>
+        <p className="home-subtitle">Track and manage student achievements in one place.</p>
+
+        <Link to="/login" className="home-btn">Login</Link>
+        <Link to="/about" className="home-btn">About</Link>
       </div>
     </div>
   );

@@ -1,32 +1,31 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Nav, Container, Form } from "react-bootstrap";
+import "./Navigation.css";
 
 export default function Navigation() {
   const [darkMode, setDarkMode] = useState(
     localStorage.getItem("theme") === "dark"
   );
 
-  // Apply theme to document
   useEffect(() => {
     document.body.className = darkMode ? "dark-mode" : "light-mode";
     localStorage.setItem("theme", darkMode ? "dark" : "light");
   }, [darkMode]);
 
   return (
-    <Navbar
-      bg={darkMode ? "dark" : "primary"}
-      variant={darkMode ? "dark" : "light"}
-      expand="lg"
-      className="shadow-sm"
-    >
+    <Navbar expand="lg" className="custom-navbar" variant="dark">
       <Container>
-        <Navbar.Brand as={Link} to="/" className="fw-bold text-light">
+        <Navbar.Brand as={Link} to="/" className="brand-text">
           🎓 Student Achievements Portal
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
+
+        {/* Hamburger */}
+        <Navbar.Toggle aria-controls="main-nav" className="hamburger" />
+
+        <Navbar.Collapse id="main-nav">
+          <Nav className="ms-auto nav-links">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/login">Login</Nav.Link>
             <Nav.Link as={Link} to="/about">About</Nav.Link>
@@ -37,10 +36,10 @@ export default function Navigation() {
           <Form.Check
             type="switch"
             id="dark-mode-toggle"
-            label={darkMode ? "🌙 Dark" : "☀️ Light"}
             checked={darkMode}
             onChange={() => setDarkMode(!darkMode)}
-            className="ms-3 text-light"
+            label={darkMode ? "🌙 Dark" : "🌞 Light"}
+            className="theme-switch"
           />
         </Navbar.Collapse>
       </Container>
