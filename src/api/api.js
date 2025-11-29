@@ -7,11 +7,13 @@ const API = axios.create({
 // Add student achievement
 export const addAchievementAPI = (data) => API.post("/achievements", data);
 
-// Get student achievements
-export const getAchievementsAPI = (username) =>
-  API.get(`/achievements/${username}`);
+// Get all achievements of a student
+export const getAchievementsAPI = (username) => API.get(`/achievements/${username}`);
 
-// Login (same route for both)
-export const loginAPI = (data) => API.post("/login", data);
+// Student login
+export const studentLoginAPI = (data) => API.post("/login", data);
+
+// Admin login
+export const adminLoginAPI = (data) => API.post("/login", data);
 
 export default API;
